@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroupmenu">
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mời bạn chọn bài học:"
+        android:textColor="#A80007"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/maotu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0055A8"
+        android:text="1. Mạo từ"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tinhtu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0055A8"
+        android:text="2. Tính từ"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/sosanh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0055A8"
+        android:text="3. So sánh"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/gioitu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0055A8"
+        android:text="4. Giới từ"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/lientu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0055A8"
+        android:text="5. Liên từ"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/thantu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0055A8"
+        android:text="6. Thán từ"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/menhde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0055A8"
+        android:text="7. Mệnh đề"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/bacham"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0055A8"
+        android:text="..."
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <ImageView
+            android:id="@+id/hinhbackmenu"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/backmenu" />
+        <ImageView
+            android:id="@+id/hinhgiupdo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/giupdo" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
