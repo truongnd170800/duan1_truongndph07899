@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.duan1_truongndph07899">
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,14 +19,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".gioithieu"></activity>
-        <activity android:name=".hocnghe"></activity>
-        <activity android:name=".xemvideo"></activity>
-        <activity android:name=".playvideo" ></activity>
-        <activity android:name=".elearning" ></activity>
-        <activity android:name=".Ghinho_congviecActivity"></activity>
-        <activity android:name=".vanpham"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".gioithieu" />
+        <activity android:name=".hocnghe" />
+        <activity android:name=".xemvideo" />
+        <activity android:name=".playvideo" />
+        <activity android:name=".elearning" />
+        <activity android:name=".Ghinho_congviecActivity" />
+        <activity android:name=".vanpham" />
+        <activity android:name=".tudien" />
+        <activity android:name=".tacgia"></activity>
     </application>
 
 </manifest>
