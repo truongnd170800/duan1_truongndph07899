@@ -23,6 +23,7 @@
         <activity android:name=".xemvideo"></activity>
         <activity android:name=".playvideo" ></activity>
         <activity android:name=".elearning" ></activity>
+        <activity android:name=".Ghinho_congviecActivity"></activity>
     </application>
 
 </manifest>
