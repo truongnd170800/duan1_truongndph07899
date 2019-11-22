@@ -20,7 +20,7 @@ public class hocnghe extends Activity implements TextToSpeech.OnInitListener {
     private EditText inputText;
     private Button speakButton;
 
-
+//hs
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
