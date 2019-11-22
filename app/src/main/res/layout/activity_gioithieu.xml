@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroupmenu"
+    >
+    <TextView
+        android:id="@+id/gioithieudungdung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gioi Thieu App"
+        android:textColor="#FF0019"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0019"
+        android:text="Ứng dụng học ngoại ngữ với các chứ năng như:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1. Tự động đọc câu theo văn bản nhập vào."
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#0000FF"
+        android:shadowColor="#FF0099"
+        android:shadowRadius="0.5"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="344dp"
+        android:layout_height="29dp"
+        android:shadowColor="#00AA00"
+        android:shadowRadius="2"
+        android:text="2. Hoc văn phạm."
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFFFFF"
+        android:textSize="50px" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3. Học tiếng anh thông qua video."
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFF900"
+        android:shadowColor="#FF3600"
+        android:shadowRadius="0.5"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        />
+
+    <TextView
+        android:id="@+id/baymau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4. Học thông qua video trên Internet"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5. Sỗ ghi chép"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFA300"
+        android:shadowColor="#14A800"
+        android:shadowRadius="0.5"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <ImageView
+            android:id="@+id/hinhbackmenu"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/backmenu" />
+        <ImageView
+            android:id="@+id/hinhgiupdo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/giupdo" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
