@@ -58,6 +58,28 @@ public void onCreate(Bundle savedInstanceState) {
         Intent i = new Intent(this,playvideo.class);
         startActivity(i);
     }
+    public void btnghichep(View view){
+    Intent intent = new Intent(this,Ghinho_congviecActivity.class);
+    startActivity(intent);
+    }
+    public void btnvanpham (View view){
+        Intent intent = new Intent(this,vanpham.class);
+        startActivity(intent);
+    }
+    public void btntudien (View view){
+        Intent intent = new Intent(this,tudien.class);
+        startActivity(intent);
+    }
+
+    public void btnyoutube (View view){
+        Intent intent = new Intent(this,elearning.class);
+        startActivity(intent);
+    }
+    public void btntacgia (View view){
+        Intent intent = new Intent(this,tacgia.class);
+        startActivity(intent);
+    }
+
 
 
 //        if(pos==1)

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.duan1_truongndph07899">
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -21,6 +22,7 @@
         <activity android:name=".hocnghe"></activity>
         <activity android:name=".xemvideo"></activity>
         <activity android:name=".playvideo" ></activity>
+        <activity android:name=".elearning" ></activity>
     </application>
 
 </manifest>
