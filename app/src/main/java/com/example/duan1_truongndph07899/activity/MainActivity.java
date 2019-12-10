@@ -1,20 +1,17 @@
-package com.example.duan1_truongndph07899;
+package com.example.duan1_truongndph07899.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.graphics.Rect;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
+
+import com.example.duan1_truongndph07899.R;
 
 public class MainActivity extends   AppCompatActivity  {
 private ImageView btIntro;
@@ -33,7 +30,7 @@ public void onCreate(Bundle savedInstanceState) {
         btIntro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(MainActivity.this,gioithieu.class);
+                Intent intent =new Intent(MainActivity.this, gioithieu.class);
                 startActivity(intent);
             }
         });
@@ -50,12 +47,12 @@ public void onCreate(Bundle savedInstanceState) {
         }
 
     public void btnhocnghe(View view) {
-    Intent i = new Intent(this,hocnghe.class);
+    Intent i = new Intent(this, hocnghe.class);
     startActivity(i);
     }
 
     public void btnhocquavideo(View view) {
-        Intent i = new Intent(this,playvideo.class);
+        Intent i = new Intent(this, playvideo.class);
         startActivity(i);
     }
     public void btnghichep(View view){
@@ -63,22 +60,43 @@ public void onCreate(Bundle savedInstanceState) {
     startActivity(intent);
     }
     public void btnvanpham (View view){
-        Intent intent = new Intent(this,vanpham.class);
+        Intent intent = new Intent(this, vanpham.class);
         startActivity(intent);
     }
     public void btntudien (View view){
-        Intent intent = new Intent(this,tudien.class);
+        Intent intent = new Intent(this, tuDienn.class);
         startActivity(intent);
     }
 
     public void btnyoutube (View view){
-        Intent intent = new Intent(this,elearning.class);
+        Intent intent = new Intent(this, elearning.class);
         startActivity(intent);
     }
     public void btntacgia (View view){
-        Intent intent = new Intent(this,tacgia.class);
+        Intent intent = new Intent(this, tacgia.class);
         startActivity(intent);
     }
+    public void btnthoat (View view){
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setMessage("Bạn Có muốn thoát không?");
+        AlertDialog dialog = builder.create();
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                System.exit(0);
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        builder.show();
+
+    }
+
 
 
 

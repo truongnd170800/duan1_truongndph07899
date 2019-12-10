@@ -1,35 +1,33 @@
-package com.example.duan1_truongndph07899;
+package com.example.duan1_truongndph07899.activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
 
-import java.util.ArrayList;
+import com.example.duan1_truongndph07899.R;
 
-public class vanpham extends Activity {
+public class elearning extends Activity {
+
+    WebView wb;
     ImageView giupdo, menuchinh;
-    TextView maotu, tinhtu, sosanh, gioitu, lientu, thantu, menhde;
-    private DataBaseHelper myDbHelper;
-    private ArrayList<String> arraywork;
-    private ArrayAdapter<String> arrayadapter;
-    private ListView list;
-    private String TAG = "mysqllite";
-    static public int maotugui = 1;
-    static public int code_thaotac_sua = 888;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vanpham);
-
+        setContentView(R.layout.activity_elearning);
         giupdo = (ImageView) findViewById(R.id.hinhgiupdo);
         menuchinh = (ImageView) findViewById(R.id.hinhbackmenu);
+        wb = (WebView) findViewById(R.id.webView1);
+        wb.loadUrl("http://m.youtube.com/results?gl=US&client=mv-google&hl=vi&q=hoc+tieng+anh");
+        wb.setWebViewClient(new WebViewClient());
+        WebSettings webSettings = wb.getSettings();
+        webSettings.setJavaScriptEnabled(true);
 
 
         menuchinh.setOnClickListener(new View.OnClickListener() {
@@ -37,10 +35,11 @@ public class vanpham extends Activity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 finish();
-                Intent i=new Intent(getApplicationContext(),MainActivity.class);
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
 
             }
+
         });
     }
 }

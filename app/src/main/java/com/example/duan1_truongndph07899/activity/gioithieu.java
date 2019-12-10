@@ -1,17 +1,13 @@
-package com.example.duan1_truongndph07899;
+package com.example.duan1_truongndph07899.activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
-import android.text.style.RelativeSizeSpan;
-import android.text.style.UnderlineSpan;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.duan1_truongndph07899.R;
 
 public class gioithieu extends Activity {
     TextView gioithieudungdung,baymau;
@@ -49,7 +45,7 @@ public class gioithieu extends Activity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 finish();
-                Intent i=new Intent(getApplicationContext(),MainActivity.class);
+                Intent i=new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
 
             }

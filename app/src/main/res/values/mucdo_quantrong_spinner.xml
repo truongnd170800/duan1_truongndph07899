@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="teo">
+        <item >Đặc biệt</item>
+        <item >Bình thường</item>
+        <item >Không quan trọng</item>
+    </string-array>
+    
+</resources>

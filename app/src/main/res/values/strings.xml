@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">duan1_truongndph07899</string>
+    <string name="app_name">Học Tiếng Anh</string>
     <string name="title_activity_login">Sign in</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>

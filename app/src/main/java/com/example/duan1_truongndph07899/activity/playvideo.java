@@ -1,4 +1,4 @@
-package com.example.duan1_truongndph07899;
+package com.example.duan1_truongndph07899.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.VideoView;
+
+import com.example.duan1_truongndph07899.R;
+import com.example.duan1_truongndph07899.activity.MainActivity;
 
 public class playvideo extends Activity {
     VideoView vv;
@@ -35,7 +38,7 @@ public class playvideo extends Activity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 finish();
-                Intent i=new Intent(getApplicationContext(),xemvideo.class);
+                Intent i=new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
 
             }

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroupmenu"
+    android:layout_height="match_parent"
+    tools:context=".activity.infotracuu">
+    <TextView
+        android:id="@+id/tukhoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#A80007"
+        android:text="Kết quả"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/hienketqua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0055A8"
+        android:text="Data không có dữ liệu hoặc từ sai."
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/buttonquaylaicua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quay lại" />
+
+</LinearLayout>

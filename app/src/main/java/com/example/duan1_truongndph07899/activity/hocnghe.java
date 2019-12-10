@@ -1,4 +1,4 @@
-package com.example.duan1_truongndph07899;
+package com.example.duan1_truongndph07899.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import java.util.HashMap;
+import com.example.duan1_truongndph07899.R;
 
 public class hocnghe extends Activity implements TextToSpeech.OnInitListener {
     ImageView giupdo,menuchinh;
@@ -55,7 +55,7 @@ public class hocnghe extends Activity implements TextToSpeech.OnInitListener {
                 // TODO Auto-generated method stub
 
                 finish();
-                Intent i=new Intent(getApplicationContext(),MainActivity.class);
+                Intent i=new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
             }
         });

@@ -1,4 +1,4 @@
-package com.example.duan1_truongndph07899;
+package com.example.duan1_truongndph07899.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.duan1_truongndph07899.R;
+import com.example.duan1_truongndph07899.activity.MainActivity;
+import com.example.duan1_truongndph07899.activity.playvideo;
 
 class xemvideo extends Activity {
     TextView chonvideo;
@@ -25,7 +29,7 @@ class xemvideo extends Activity {
 
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent i=new Intent(getApplication(),playvideo.class);
+                Intent i=new Intent(getApplication(), playvideo.class);
                 startActivity(i);
 
             }
@@ -36,7 +40,7 @@ class xemvideo extends Activity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 finish();
-                Intent i=new Intent(getApplicationContext(),MainActivity.class);
+                Intent i=new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
 
             }

@@ -11,24 +11,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name=".activity.Ghinho_congviecActivity"></activity>
+        <activity android:name=".activity.Nhap_congviecActivity"></activity>
+        <activity android:name=".activity.tuDienn" />
+        <activity android:name=".activity.infovanpham" />
+        <activity android:name=".activity.tacgia" />
+        <activity android:name=".activity.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".gioithieu" />
-        <activity android:name=".hocnghe" />
-        <activity android:name=".xemvideo" />
-        <activity android:name=".playvideo" />
-        <activity android:name=".elearning" />
-        <activity android:name=".Ghinho_congviecActivity" />
-        <activity android:name=".vanpham" />
-        <activity android:name=".tudien" />
-        <activity android:name=".tacgia"></activity>
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.gioithieu" />
+        <activity android:name=".activity.hocnghe" />
+<!--        <activity android:name=".xemvideo" />-->
+        <activity android:name=".activity.playvideo" />
+        <activity android:name=".activity.elearning" />
+        <activity android:name=".activity.vanpham" />
+        <activity android:name=".activity.infotracuu" />
     </application>
 
 </manifest>
