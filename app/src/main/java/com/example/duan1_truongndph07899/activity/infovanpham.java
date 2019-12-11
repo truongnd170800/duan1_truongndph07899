@@ -55,7 +55,7 @@ public class infovanpham extends AppCompatActivity {
         myDbHelper = new DataBaseHelper(this);
         //mo csdl
         try{
-            myDbHelper.checkAndCopyDatabase();
+//            myDbHelper.checkAndCopyDatabase();
             myDbHelper.openDataBase();
         }catch(SQLException sqle){
             Log.d(TAG, "database error!");

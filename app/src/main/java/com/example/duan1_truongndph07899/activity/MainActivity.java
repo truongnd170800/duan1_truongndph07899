@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.duan1_truongndph07899.R;
+import com.example.duan1_truongndph07899.adapter.DictonaryActivity;
 
 public class MainActivity extends   AppCompatActivity  {
 private ImageView btIntro;
@@ -64,7 +65,7 @@ public void onCreate(Bundle savedInstanceState) {
         startActivity(intent);
     }
     public void btntudien (View view){
-        Intent intent = new Intent(this, tuDienn.class);
+        Intent intent = new Intent(this, DictonaryActivity.class);
         startActivity(intent);
     }
 

@@ -59,8 +59,8 @@ public class infotracuu extends Activity {
         myDbHelper = new DataBaseHelper(this);
         //mo csdl
         try{
-            myDbHelper.checkAndCopyDatabase();
-            myDbHelper.openDataBase();
+            myDbHelper.createDataBase();
+            myDbHelper.openDataBase(1);
         }catch(SQLException sqle){
             Log.d(TAG, "database error!");
         }
