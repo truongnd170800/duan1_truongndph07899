@@ -32,6 +32,13 @@ public class infotracuu extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_infotracuu);
+        myDbHelper = new DataBaseHelper(infotracuu.this);
+        myDbHelper.createDataBase();
+        try {
+            myDbHelper.openDataBase();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
         quaylai=(Button)findViewById(R.id.buttonquaylaicua);
         quaylai.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +47,16 @@ public class infotracuu extends Activity {
                 // TODO Auto-generated method stub
                 finish();
                 Intent i=new Intent(getApplicationContext(), tuDienn.class);
+                startActivity(i);
+            }
+        });
+        quaylai=(Button)findViewById(R.id.buttonquaylaicua);
+        quaylai.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                finish();
+                Intent i=new Intent(getApplicationContext(),tuDienn.class);
                 startActivity(i);
             }
         });
@@ -59,28 +76,30 @@ public class infotracuu extends Activity {
         myDbHelper = new DataBaseHelper(this);
         //mo csdl
         try{
-            myDbHelper.createDataBase();
-            myDbHelper.openDataBase(1);
+//            myDbHelper.copyDataBase();
+//            myDbHelper.checkDataBase();
+//            myDbHelper.checkAndCopyDatabase();
+            myDbHelper.openDataBase();
         }catch(SQLException sqle){
             Log.d(TAG, "database error!");
         }
 
-        try {
-//            Cursor c = myDbHelper.QueryData("select nghia from tudien where tukhoa="+tukhoa+"");
-            Cursor c = myDbHelper.QueryData("select nghia from tudien where tukhoa='"+tukhoa+"'");
-            if(c!=null){
-                if  (c.moveToFirst()) {
-
-                    String str = c.getString(c.getColumnIndex("nghia"));
-
-                    hienketqua.setText(str);
-
-                }
-                arrayadapter.notifyDataSetChanged();
-            }
-        } catch (SQLException e) {
-            Log.d(TAG, "Query error!");
-        }
+//        try {
+//            //Cursor c = myDbHelper.QueryData("select nghia from tudien where tukhoa="+tukhoa+"");
+////            Cursor c = myDbHelper.QueryData("select nghia from tudien where tukhoa='"+tukhoa+"'");
+//            if(c!=null){
+//                if  (c.moveToFirst()) {
+//
+//                    String str = c.getString(c.getColumnIndex("nghia"));
+//
+//                    hienketqua.setText(str);
+//
+//                }
+//                arrayadapter.notifyDataSetChanged();
+//            }
+//        } catch (SQLException e) {
+//            Log.d(TAG, "Query error!");
+//        }
 
 
 
@@ -89,4 +108,3 @@ public class infotracuu extends Activity {
 
 
 }
-

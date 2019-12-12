@@ -11,11 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".adapter.DictonaryActivity"></activity>
-        <activity android:name=".activity.Ghinho_congviecActivity"></activity>
-        <activity android:name=".activity.Nhap_congviecActivity"></activity>
+        <activity android:name=".tudien.tudientt" /> <!-- <activity android:name=".adapter.DictonaryActivity" /> -->
+        <activity android:name=".activity.Ghinho_congviecActivity" />
+        <activity android:name=".activity.Nhap_congviecActivity" />
         <activity android:name=".activity.tuDienn" />
-        <activity android:name=".activity.infovanpham" />
         <activity android:name=".activity.tacgia" />
         <activity android:name=".activity.SplashScreenActivity">
             <intent-filter>
@@ -26,11 +25,11 @@
         </activity>
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.gioithieu" />
-        <activity android:name=".activity.hocnghe" />
-<!--        <activity android:name=".xemvideo" />-->
+        <activity android:name=".activity.hocnghe" /> <!-- <activity android:name=".xemvideo" /> -->
         <activity android:name=".activity.playvideo" />
         <activity android:name=".activity.elearning" />
-        <activity android:name=".activity.vanpham" />
+        <activity android:name=".activity.vanpham.vanpham" />
+        <activity android:name=".activity.vanpham.infovanpham"></activity>
         <activity android:name=".activity.infotracuu" />
     </application>
 

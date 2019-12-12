@@ -3,12 +3,10 @@ package com.example.duan1_truongndph07899.database;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.os.Build;
 import android.util.Log;
 
-import androidx.annotation.Nullable;
+import com.example.duan1_truongndph07899.tudien.Word;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -16,137 +14,140 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
 
+    private static String TAG = "DataBaseHelper"; // Tag just for the LogCat window
+    //destination path (location) of our database on device
     private static String DB_PATH = "";
-    private static String DB_NAME = "msqllite.db";
-    private String TAG = "TAG";
-    private SQLiteDatabase myDataBase;
-    private final Context myContext;
+    private static String DB_NAME = "";// Database name
+    private SQLiteDatabase mDataBase;
+    private final Context mContext;
 
 
+    private String AV_TABLE = "av";
+
+    public String ID = "id";
+    public String WORD = "word";
+    public String HTML = "html";
+    public String DES = "description";
+    public String PRO = "pronounce";
+
+
+    // do đường dẫn ở phiên bản API > 17 thay đổi nên chúng ta cần kiểm tra nhé
     public DataBaseHelper(Context context) {
-        super(context, DB_NAME, null, 1);
-        if (Build.VERSION.SDK_INT >= 17) {
-            DB_PATH = context.getApplicationInfo().dataDir + "/database/";
+        super(context, DB_NAME, null, 1);// 1? Its database Version
+        if (android.os.Build.VERSION.SDK_INT >= 17) {
+            DB_PATH = context.getApplicationInfo().dataDir + "/databases/";
         } else {
-            DB_PATH = "/data/data" + context.getPackageName() + "/database/";
+            DB_PATH = "/data/data/" + context.getPackageName() + "/databases/";
         }
-        this.myContext = context;
-
+        this.mContext = context;
     }
 
-    public void checkAndCopyDatabase(){
-        boolean dbExist = checkDataBase();
-        if(dbExist){
-            Log.d(TAG, "database already exist!");
-        }else{
-            this.getReadableDatabase();
-            try {
-                copyDataBase();
-            } catch (IOException e) {
-                Log.d(TAG,"Error copying database");
-            }
-        }
-    }
-    private boolean checkDataBase(){
-        SQLiteDatabase checkDB = null;
-        try{
-            String myPath = DB_PATH + DB_NAME;
-            checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READWRITE);
-        }catch(SQLiteException e){
-        }
-        if(checkDB != null) checkDB.close();
-        return checkDB != null ? true : false;
-    }
-    private void copyDataBase() throws IOException{
-        InputStream myInput = myContext.getAssets().open(DB_NAME);
-        String outFileName = DB_PATH + DB_NAME;
-        OutputStream myOutput = new FileOutputStream(outFileName);
-        byte[] buffer = new byte[1024];
-        int length;
-        while ((length = myInput.read(buffer))>0){
-            myOutput.write(buffer, 0, length);
-        }
-        myOutput.flush();
-        myOutput.close();
-        myInput.close();
-    }
+    public void createDataBase() {
+        //If the database does not exist, copy it from the assets.
 
-    public void createDataBase(){
-        boolean mDataBaseExist = checkDataBases();
-        if (!mDataBaseExist){
+        boolean mDataBaseExist = checkDataBase();
+        if (!mDataBaseExist) {
             this.getReadableDatabase();
             this.close();
             try {
-                copyDataBases();
-                Log.e("TAG","createDataBase database created");
-            } catch (IOException e) {
-                return;
-//                throw new Error("ErrorCopyingDataBase");
+                //Copy the database from assests
+                copyDataBase();
+                Log.e(TAG, "createDatabase database created");
+            } catch (IOException mIOException) {
+                throw new Error("ErrorCopyingDataBase");
             }
         }
     }
-    private SQLiteDatabase mDataBase;
 
-    public boolean openDataBase(int i)throws SQLException{
+    //Check that the database exists here: /data/data/your package/databases/Da Name
+    private boolean checkDataBase() {
+        File dbFile = new File(DB_PATH + DB_NAME);
+        //Log.v("dbFile", dbFile + "   "+ dbFile.exists());
+        return dbFile.exists();
+    }
+
+    //Copy the database from assets
+    private void copyDataBase() throws IOException {
+        InputStream mInput = mContext.getAssets().open(DB_NAME);
+        String outFileName = DB_PATH + DB_NAME;
+        OutputStream mOutput = new FileOutputStream(outFileName);
+        byte[] mBuffer = new byte[1024];
+        int mLength;
+        while ((mLength = mInput.read(mBuffer)) > 0) {
+            mOutput.write(mBuffer, 0, mLength);
+        }
+        mOutput.flush();
+        mOutput.close();
+        mInput.close();
+    }
+
+    //Open the database, so we can query it
+    public boolean openDataBase() throws SQLException {
         String mPath = DB_PATH + DB_NAME;
-
-        mDataBase = SQLiteDatabase.openDatabase(mPath,null,SQLiteDatabase.OPEN_READONLY);
+        //Log.v("mPath", mPath);
+        mDataBase = SQLiteDatabase.openDatabase(mPath, null, SQLiteDatabase.CREATE_IF_NECESSARY);
+        //mDataBase = SQLiteDatabase.openDatabase(mPath, null, SQLiteDatabase.NO_LOCALIZED_COLLATORS);
         return mDataBase != null;
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
-
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
-    }
-
-    @Override
     public synchronized void close() {
-        if (myDataBase != null)
-            myDataBase.close();
+        if (mDataBase != null)
+            mDataBase.close();
         super.close();
     }
-    //kiem tra database neu ton tai thi thong bao database san dang su dung
-    //neu khong thi copy database vao duong dan "DB_PATH+DB_NAME"
-    private boolean checkDataBases(){
-        File dbfile = new File(DB_PATH +DB_NAME);
-        return dbfile.exists();
-    }
 
-    private void copyDataBases() throws IOException{
-        InputStream mInput = myContext.getAssets().open(DB_NAME);
-        String outFileName = DB_NAME +DB_PATH;
-        OutputStream mOutPut = new FileOutputStream(outFileName);
-        byte [] mBuffer = new byte[1042];
-        int mLength;
-        while ((mLength = mInput.read(mBuffer))>0){
-            mOutPut.write(mBuffer, 0, mLength);
+
+    public List<Word> searchWord(String text) {
+        List<Word> words = new ArrayList<>();
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+
+        String SQL = "SELECT * FROM " + AV_TABLE + " WHERE " + WORD + " LIKE '" + text + "%'";
+
+        Cursor cursor = sqLiteDatabase.rawQuery(SQL, null);
+
+        if (cursor != null) {
+            if (cursor.getCount() > 0) {
+
+                cursor.moveToFirst();
+                while (!cursor.isAfterLast()) {
+
+                    Word word = new Word();
+
+                    word.id = cursor.getInt(cursor.getColumnIndex(ID));
+                    word.word = cursor.getString(cursor.getColumnIndex(WORD));
+                    word.description = cursor.getString(cursor.getColumnIndex(DES));
+                    word.html = cursor.getString(cursor.getColumnIndex(HTML));
+                    word.pronounce = cursor.getString(cursor.getColumnIndex(PRO));
+                    words.add(word);
+                    cursor.moveToNext();
+
+                }
+                cursor.close();
+            }
         }
-        mOutPut.flush();
-        mOutPut.close();
-        mInput.close();
-    }
-    public void openDataBase() throws SQLException{
-        String myPath = DB_PATH + DB_NAME;
-        myDataBase = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
+
+        return words;
     }
 
-    public void ExeSQLData(String sql) throws SQLException{
-        myDataBase.execSQL(sql);
+    @Override
+    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+
     }
 
-    public Cursor QueryData(String query) throws SQLException{
-        return myDataBase.rawQuery(query, null);
+    @Override
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+
     }
-//    public void getAll(){
-//        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-//        String SQL =
-//    }
+
+
+    public Cursor QueryData(String s) {
+        return mDataBase.rawQuery(s,null);
+    }
 }
