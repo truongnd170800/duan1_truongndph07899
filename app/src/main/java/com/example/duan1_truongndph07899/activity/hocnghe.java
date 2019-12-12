@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,13 +13,15 @@ import android.widget.Toast;
 
 import com.example.duan1_truongndph07899.R;
 
+import java.util.Locale;
+
 public class hocnghe extends Activity implements TextToSpeech.OnInitListener {
     ImageView giupdo,menuchinh;
-    Button docvanban;
+
     private int MY_DATA_CHECK_CODE = 0;
     private TextToSpeech tts;
-    private EditText inputText;
-    private Button speakButton;
+    private EditText ptext;
+    private Button b;
 
 //hs
     @Override
@@ -29,24 +32,33 @@ public class hocnghe extends Activity implements TextToSpeech.OnInitListener {
 
         giupdo=(ImageView)findViewById(R.id.hinhgiupdo);
         menuchinh=(ImageView)findViewById(R.id.hinhbackmenu);
-        docvanban=(Button)findViewById(R.id.buttondoc);
-        inputText = (EditText) findViewById(R.id.noidungvanban);
-        speakButton = (Button) findViewById(R.id.buttondoc);
 
 
-        speakButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                String text = inputText.getText().toString();
-                if (text!=null && text.length()>0) {
-                    Toast.makeText(hocnghe.this, "Saying: " + text, Toast.LENGTH_LONG).show();
-                    tts.speak(text, TextToSpeech.QUEUE_ADD, null);
-                }
+        ptext = (EditText) findViewById(R.id.noidungvanban);
+        b = (Button) findViewById(R.id.buttondoc);
+        tts = new TextToSpeech(this, this);
+
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tts.speak(ptext.getText().toString(),TextToSpeech.QUEUE_FLUSH,null);
             }
         });
 
-        Intent checkIntent = new Intent();
-        checkIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
-        startActivityForResult(checkIntent, MY_DATA_CHECK_CODE);
+
+//        b.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                String text = text.getText().toString();
+//                if (text!=null && text.length()>0) {
+//                    Toast.makeText(hocnghe.this, "Saying: " + text, Toast.LENGTH_LONG).show();
+//                    tts.speak(text, TextToSpeech.QUEUE_ADD, null);
+//                }
+//            }
+//        });
+
+//        Intent checkIntent = new Intent();
+//        checkIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
+//        startActivityForResult(checkIntent, MY_DATA_CHECK_CODE);
 
 
         menuchinh.setOnClickListener(new View.OnClickListener() {
@@ -64,31 +76,42 @@ public class hocnghe extends Activity implements TextToSpeech.OnInitListener {
     }
 
 
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == MY_DATA_CHECK_CODE) {
-            if (resultCode == TextToSpeech.Engine.CHECK_VOICE_DATA_PASS) {
-                // success, create the TTS instance
-                tts = new TextToSpeech(this, this);
-            }
-            else {
-                // missing data, install it
-                Intent installIntent = new Intent();
-                installIntent.setAction(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
-                startActivity(installIntent);
-            }
-        }
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        if (requestCode == MY_DATA_CHECK_CODE) {
+//            if (resultCode == TextToSpeech.Engine.CHECK_VOICE_DATA_PASS) {
+//                // success, create the TTS instance
+//                tts = new TextToSpeech(this, this);
+//            }
+//            else {
+//                // missing data, install it
+//                Intent installIntent = new Intent();
+//                installIntent.setAction(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
+//                startActivity(installIntent);
+//            }
+//        }
+//
+//    }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    protected void onDestroy(){
+        if (tts != null){
+            tts.stop();
+            tts.shutdown();
+        }
+        super.onDestroy();
     }
 
     public void onInit(int status) {
-        if (status == TextToSpeech.SUCCESS) {
-            Toast.makeText(hocnghe.this,
-                    "Text-To-Speech engine is initialized", Toast.LENGTH_LONG).show();
-        }
-        else if (status == TextToSpeech.ERROR) {
-            Toast.makeText(hocnghe.this,
-                    "Error occurred while initializing Text-To-Speech engine", Toast.LENGTH_LONG).show();
-        }
+        if (status != TextToSpeech.ERROR){
+                tts.setLanguage(Locale.US);
+    }
+
     }
 
 
