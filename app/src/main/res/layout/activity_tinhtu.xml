@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.vanpham.tinhtu">
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="
+
+Tính từ
+(Articles)
+1. Định nghĩa: Tính từ là từ dùng đẻ phẩm định  cho danh
+từ bằng cách miêu tả các dặc tính của sự vật mà danh từ đó đại diện \n\n
+
+2. Phân loại tính từ: Tính từ có thể được phân loại theo vị trí hoặc chức năng: /n\n
+
+2.1 Tính từ phân loại theo vị trí:\n\n
+
+a. Tính từ đứng trước danh từ\n\n
+
+a good pupil (một học sinh giỏi)\n\n
+
+a strong man (một cậu bé khỏe mạnh)\n\n
+
+Hầu hết tính từ trong tiếng Anh khi được dùng để tính chất cho danh từ đều đứng trước danh từ, ngược lại trong tiếng Việt tính từ đứng sau danh từ mà nó phẩm định Thông thường, những tính từ đứng trước danh từ cũng có thể đứng một mình, không có danh từ theo sau như nice, good, bad, long, short, hot, happy, beautiful....Tuy nhiên , một số ít tính từ lại chỉ đứng một mình trước danh từ, như former, latter, main ...\n\n
+
+b. Tính từ đứng một mình , không cần bất kì danh từ nào đứng sau nó:\n\n
+
+Ví dụ:
+
+The boy is afraid.
+
+The woman is asleep.
+
+The girl is well.
+
+She soldier looks ill."></TextView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bthquailai"
+        android:text="Quay lại"/>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.vanpham.lientu">
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" LIÊN TỪ
+
+(Conjunctions)
+ \n \n
+1. Định nghĩa: Liên từ là từ dùng để nối các từ loại, cụm từ hay mệnh đề. \n \n
+
+2. Phân loại: Liên từ được chia làm hai loại chính:\n \n
+
+a. Đẳng lập (song song):\n \n
+
+Dùng loại liên từ này để nối những các từ loại hoặc cụm từ/ nhóm từ cùng một loại, hoặc những mệnh đề ngang hàng nhau (tính từ với tính từ, danh từ với danh từ ...):\n \n
+
+Ví dụ:\n \n
+
+He and I are students.\n \n
+
+She is beautiful and kind.\n \n
+
+They are learning to read and write.\n \n
+
+b. Liên từ phụ thuộc:\n \n
+
+Loại liên từ phụ thuộc nối kết các nhóm từ, cụm từ hoặc mệnh đề có chức năng khác nhau - mệnh đề phụ với mệnh đề chính trong câu.\n \n "/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bthquailai"
+        android:text="Quay lại"/>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.vanpham.thantu">
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" THÁN TỪ
+
+(Interjections)  \n \n
+
+1. Định nghĩa : Thán từ là một âm thanh phát ra hay tiếng kêu xen vào một câu để biểu lộ một cảm xúc động hay một biểu lộ mạnh mẽ nào đó và được thể hiện trong văn viết bằng dấu cảm thán hoặc dấu hỏi.  \n \n
+
+2. Một số thánh từ thường gặp:  \n \n
+
+Chỉ sự phấn khởi : hurrah, cheer up  \n \n
+
+Chỉ sự khing bỉ : bah, pshaw, pood, tut, for shame  \n \n
+
+Chỉ sự nghi ngờ : hum. \n \n
+
+Gọi ai đó; hỏi han : hello, hey, well \n \n
+
+Chỉ sự bực mình : hang, confound \n \n
+
+Chỉ sự sung sướng : o, oh, aha, why, ah, \n \n
+
+Chỉ sự đau đớn : ouch, alas"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bthquailai"
+        android:text="Quay lại"/>
+
+</LinearLayout>

@@ -53,7 +53,7 @@ public class vanpham extends Activity {
                 // TODO Auto-generated method stub
 
                 finish();
-                Intent i=new Intent(getApplicationContext(), infovanpham.class);
+                Intent i=new Intent(getApplicationContext(), maotu.class);
                 i.putExtra("id", "1");
                 startActivity(i);
 
@@ -65,20 +65,20 @@ public class vanpham extends Activity {
                 // TODO Auto-generated method stub
 
                 finish();
-                Intent i=new Intent(getApplicationContext(),infovanpham.class);
+                Intent i=new Intent(getApplicationContext(),tinhtu.class);
                 i.putExtra("id", "2");
                 startActivity(i);
 
             }
         });
-
+//
         sosanh.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 // TODO Auto-generated method stub
 
                 finish();
-                Intent i=new Intent(getApplicationContext(),infovanpham.class);
+                Intent i=new Intent(getApplicationContext(),sosanh.class);
                 i.putExtra("id", "3");
                 startActivity(i);
 
@@ -90,7 +90,7 @@ public class vanpham extends Activity {
                 // TODO Auto-generated method stub
 
                 finish();
-                Intent i=new Intent(getApplicationContext(),infovanpham.class);
+                Intent i=new Intent(getApplicationContext(),gioitu.class);
                 i.putExtra("id", "4");
                 startActivity(i);
 
@@ -103,7 +103,7 @@ public class vanpham extends Activity {
                 // TODO Auto-generated method stub
 
                 finish();
-                Intent i=new Intent(getApplicationContext(),infovanpham.class);
+                Intent i=new Intent(getApplicationContext(),lientu.class);
                 i.putExtra("id", "5");
                 startActivity(i);
 
@@ -116,7 +116,7 @@ public class vanpham extends Activity {
                 // TODO Auto-generated method stub
 
                 finish();
-                Intent i=new Intent(getApplicationContext(),infovanpham.class);
+                Intent i=new Intent(getApplicationContext(),thantu.class);
                 i.putExtra("id", "6");
                 startActivity(i);
 
@@ -129,7 +129,7 @@ public class vanpham extends Activity {
                 // TODO Auto-generated method stub
 
                 finish();
-                Intent i=new Intent(getApplicationContext(),infovanpham.class);
+                Intent i=new Intent(getApplicationContext(),menhde.class);
                 i.putExtra("id", "7");
                 startActivity(i);
 

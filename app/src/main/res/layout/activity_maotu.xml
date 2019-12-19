@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.vanpham.maotu">
+    <TextView
+    android:layout_marginTop="50dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="
+
+ MẠO TỪ
+(Articles)
+1 Định nghĩa: Mạo từ là từ dùng trước danh từ và cho biết danh từ ấy đề cập đến một đối tượng xác định hay không xác định. \n\n
+Chúng ta dùng  khi danh từ chỉ đối tượng được cả người nói lẫn người nghe biết rõ đối tượng nào đó. Ngược lại, khi dùng mạo từ bất định a, an; người nói đề cập đến một đối tượng chung hoặc chưa xác định được:\n \n
+\n
+Mạo từ trong tiếng Anh chỉ gồm ba từ và được phân chia như sau:\n \n
+
+Mạo từ xác định (Denfinite article): the\n\n
+
+Maọ từ bất định (Indefinite article): a, an\n\n
+
+Maọ từ Zero (Zero article): thường áp dụng cho danh từ không đếm được (uncountable nouns) và danh từ đếm được ở dạng số nhiều: coffee, tea; people, clothes\n
+\n
+Mạo từ không phải là một loại từ riêng biệt, chúng ta có thể xem nó như một bộ phận của tính từ dùng để bổ nghĩa - chỉ đơn vị (cái, con chiếc). \n"></TextView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bthquailai"
+        android:text="Quay lại"/>
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.vanpham.gioitu">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text=" GIỚI TỪ
+
+(Prepositions) \n \n
+
+1. Định nghĩa: Giới từ là từ loại chỉ sự liên quan giữa các từ loại trong cụm từ, trong câu. Những từ thường đi sau giới từ là tân ngữ (Object), Verb + ing, Cụm danh từ ...\n \n
+
+Ví dụ: \n \n
+
+a. I went into the room. \n \n
+
+Ta thấy rõ, ở ví dụ a.,  là tân ngữ của giới từ . Ở ví dụ b.,  là tân ngữ của giới từ .\n \n
+
+Chú ý: Các bạn phải luôn phân biệt trạng từ và giới từ, vì thường khi một từ có hai chức năng đó (vừa là trạng từ và giới từ). Điều khác nhau cơ bản là Trạng từ thì không có tân ngữ theo sau. Hãy xét các câu sau đây: \n \n
+
+Ví dụ: \n \n
+
+1. Please, come in. It's raining. (Trạng từ)\n \n
+
+We are in the small room. (Giới từ); vì tân ngữ của  \n \n
+
+2. He ran down quickly. (Trạng từ) - vì  không phải là tân ngữ ; nó chỉ là trạng từ chỉ cách thức mà thôi.\n \n
+
+3. My dictionary is on the desk. (Giới từ) - vì nó liên kết với tân ngữ: (the desk). \n \n
+
+2. Cách sử dụng giới từ trong tiếng Anh: \n \n
+" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bthquailai"
+        android:text="Quay lại"/>
+
+</LinearLayout>

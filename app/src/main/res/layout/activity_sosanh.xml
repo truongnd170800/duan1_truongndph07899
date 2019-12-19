@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.vanpham.sosanh">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1. So sánh ngang/bằng nhau. \n \n
+
+Hình thức so sánh bằng nhau được thành lập bằng cách thêm as vào trước và sau tính từ: \n \n
+
+AS + adj/adv +AS \n \n
+
+Ví dụ: John is as tall as his father. \n \n
+
+This box is as heavy as that one \n \n
+
+2. So sánh hơn/kém. \n \n
+
+Hình thức so sánh bậc hơn được thành lập bằng cách thêm -er than vào sau tính từ (đơn âm tiết) hoặc thêm more +(tính từ từ hai âm tiết trở lên) + than
+
+Ví dụ\n \n
+
+You are teller than I am \n \n
+
+John is tronger than his brother \n \n
+
+The first problem is more difficul than the second \n \n
+
+3. So sánh cực cấp. \n \n
+a. Hình thức so sánh bậc nhất được thành lập bằng cách thêm đuôi -est vào sau tính từ (đơn âm tiết) hoặc thêm -most vào trước tính từ (tính từ từ hai âm tiết trở lên)."></TextView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bthquailai"
+        android:text="Quay lại"/>
+
+
+</LinearLayout>

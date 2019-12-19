@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.vanpham.menhde">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" MỆNH ĐỀ \n \n
+
+I/ Định nghĩa: \n \n
+
+Mệnh đề là một nhóm từ có chứa một động từ đã chia và chủ từ của nó. Động từ dã chia là động từ hoà hợp với chủ từ của nó về ngôi và số . This is the man Mary saw yesterday.\n
+
+Trong câu trên chúng ta thấy có 2 mệnh đề: \n \n
+
+(1) This is the man (động từ chia là is ) \n \n
+
+(2) Mary saw yesterday (động từ đã chia là saw) \n \n
+
+Mệnh đề thường được xem là thành phần cúa câu. Nói cách khác, một câu có thể gồm nhiều mệnh đề. Trong thực hành, chúng ta căn cứ vào động từ ddax chia để nhận ra mệnh đề. Chúng ta có thể nói rằng có bao nhiêu động từ đã chiathì có bấy nhiêu mệnh đề./n " />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quay lại"
+        android:id="@+id/bthquailai"></Button>
+
+</LinearLayout>
