@@ -17,8 +17,6 @@ import java.util.List;
 public class tudientt extends AppCompatActivity {
     private EditText edtText;
     private RecyclerView lvList;
-
-
     private DataBaseHelper dataBaseHelper;
 
     private WordAdapter wordAdapter;

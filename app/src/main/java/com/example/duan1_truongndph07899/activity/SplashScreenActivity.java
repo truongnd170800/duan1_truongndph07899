@@ -22,7 +22,7 @@ public class SplashScreenActivity extends Activity {
         Thread bamgio=new Thread(){
             public void run(){
                 try{
-                    sleep(100);
+                    sleep(3000);
 
 
                 } catch (Exception e){
